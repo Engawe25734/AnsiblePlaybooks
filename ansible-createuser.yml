@@ -1,6 +1,7 @@
 # ansible <group/host Name> -m ping -u <userName> --private-key=~/devops.pem
 # ansible-playbook -b ansible-createuser.yml -u <userName> --private-key=~/devops.pem
 - hosts: all
+  become: true
   tasks:
   - name: Create Ansible User
     user:
